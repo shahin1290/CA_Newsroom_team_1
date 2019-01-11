@@ -1,1 +1,9 @@
 %h2 Articles
+
+- @articles.each do |article|
+    %img{:src => "/assets/article.jpg"}/
+    %h3= article.title
+    %p= article.lede
+    %p= article.body
+    %p= article.author
+    %p= article.date
