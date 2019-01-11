@@ -10,7 +10,6 @@ I would like to be able to see the articles listed on a page
       | A breaking news item | Some really breaking action      | William | 2012/12/12  | blah blah blah |
       | Learn Rails 5        | Build awesome rails applications | Camron  | 2013/11/11  | blah blah blah |
     When I visit the site
-    And show me the page
     Then I should see "A breaking news item"
     And I should see "Some really breaking action"
     And I should see "Learn Rails 5"
