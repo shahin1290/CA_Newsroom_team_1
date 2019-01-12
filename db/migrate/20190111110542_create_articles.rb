@@ -5,7 +5,6 @@ class CreateArticles < ActiveRecord::Migration[5.2]
       t.text :lede
       t.text :body
       t.string :author
-      t.date :date
 
       t.timestamps
     end

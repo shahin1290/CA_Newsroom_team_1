@@ -4,6 +4,5 @@ FactoryBot.define do
     lede { "MyText" }
     body { "MyText" }
     author { "MyString" }
-    date { "2019-01-11" }
   end
 end
