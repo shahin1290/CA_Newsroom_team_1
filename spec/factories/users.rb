@@ -4,6 +4,6 @@ FactoryBot.define do
     password {'password'}
     password_confirmation {'password'}
     first_name {'Hanna'}
-    last_name {'Tuna'}
+    last_name {'Nyman'}
   end
 end

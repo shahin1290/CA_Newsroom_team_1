@@ -28,5 +28,14 @@ ActiveRecord::Schema.define(version: 2019_01_12_111536) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
+  create_table "articles", force: :cascade do |t|
+    t.string "title"
+    t.text "lede"
+    t.text "body"
+    t.string "author"
+    t.date "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

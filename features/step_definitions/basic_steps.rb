@@ -4,7 +4,6 @@ Given("the following user exists") do |table|
   end
 end
 
-
 Given("I visit the site") do
   visit root_path
 end
