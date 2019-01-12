@@ -6,7 +6,6 @@ RSpec.describe Article, type: :model do
     it { is_expected.to have_db_column :lede }
     it { is_expected.to have_db_column :body }
     it { is_expected.to have_db_column :author }
-    it { is_expected.to have_db_column :date }
   end
 
   describe 'Validations' do
@@ -14,7 +13,6 @@ RSpec.describe Article, type: :model do
     it { is_expected.to validate_presence_of :lede } 
     it { is_expected.to validate_presence_of :body }
     it { is_expected.to validate_presence_of :author } 
-    it { is_expected.to validate_presence_of :date }
   end
 
   describe 'Factory' do
