@@ -8,13 +8,10 @@ Given("I visit the site") do
   visit root_path
 end
 
-When('I have logged in') do
-  steps %{
-    Given I click 'Log in'
-    And I fill in 'Email' with 'hanna@random.com'
-    And I fill in 'Password' with 'password'
-    And I click 'Log in'
-  }
+Given("I am logged in as {string}") do |email|
+  @user = User.find_by email: email
+  login_as @user, scope: :user
+  visit root_path
 end
 
 When("I fill in {string} with {string}") do |element, value|

@@ -24,4 +24,4 @@ Feature: User can log in and out
   Scenario: User can log out when logged in
     Given I am logged in as 'hanna@tuna.se'
     When I click 'Log out'
-    Then I should not see 'Hello, hanna@tuna.se'
+    Then I should not see 'Hello, Hanna!'
