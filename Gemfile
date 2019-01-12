@@ -14,6 +14,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'webpacker', '~> 3.5'
 gem 'tailwindcss', '~> 0.2.0'
+gem 'haml-rails', '~> 1.0'
+gem 'launchy'
 
 group :development, :test do
   gem 'factory_bot_rails'
@@ -25,6 +27,8 @@ group :development, :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'coveralls', require: false
+  gem 'chromedriver-helper'
+  gem 'selenium-webdriver'
 end
 
 group :development do
