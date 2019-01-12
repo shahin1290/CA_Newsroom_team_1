@@ -18,3 +18,26 @@ Feature: User can sign up
     And I fill in 'Password confirmation' with 'password'
     And I click 'Sign up'
     Then I should see 'Hello, John!'
+
+ Scenario: When I don't fill in the sign up form I get error messages
+      When I click 'Sign up'
+      Then I should see "Email can't be blank"
+      And I should see "Password can't be blank"
+      And I should see "First name can't be blank"
+      And I should see "Last name can't be blank"
+
+
+    Scenario: When Password and Password confirmation doesn't match I get error message
+      When I fill in 'Password' with 'password'
+      And I fill in 'Password confirmation' with 'pasword'
+      And I click 'Sign up'
+      Then I should see "Password confirmation doesn't match Password"
+
+    Scenario: When Email is taken I get error message
+      When I fill in 'Email' with 'hanna@tuna.se'
+      And I fill in 'First name' with 'John'
+      And I fill in 'Last name' with 'Doe'
+      And I fill in 'Password' with 'password'
+      And I fill in 'Password confirmation' with 'password'
+      And I click 'Sign up'
+      Then I should see "Email has already been taken"
