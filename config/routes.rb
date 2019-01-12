@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'articles/index'
   devise_for :users
-  root to: "home#index"
+  root controller: :articles, action: :index
 end
