@@ -9,12 +9,12 @@ Given("I visit the site") do
   visit root_path
 end
 
-When("I fill in {string} with {string}") do |string, string2|
-  pending # Write code here that turns the phrase above into concrete actions
+When("I fill in {string} with {string}") do |element, value|
+  fill_in element,with: value
 end
 
 When("I click {string}") do |element|
-    click_on element
+  click_on element
 end
   
   
