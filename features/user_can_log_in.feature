@@ -12,7 +12,7 @@ Feature: User can log in and out
     And I click 'Log in'
 
   Scenario: If user fills in the login form correctly she can log in
-    When I fill in 'Email' with 'hanna@tuna.com'
+    When I fill in 'Email' with 'hanna@tuna.se'
     And I fill in 'Password' with 'password'
     And I click 'Log in'
     Then I should see 'Hello, Hanna!'
@@ -22,6 +22,6 @@ Feature: User can log in and out
     Then I should see 'Invalid Email or password.'
   
   Scenario: User can log out when logged in
-    Given I am logged in as 'hanna@tuna.com'
+    Given I am logged in as 'hanna@tuna.se'
     When I click 'Log out'
-    Then I should not see 'Hello, hanna@tuna.com'
+    Then I should not see 'Hello, hanna@tuna.se'
