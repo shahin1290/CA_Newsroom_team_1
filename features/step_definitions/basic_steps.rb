@@ -3,7 +3,7 @@ When("I visit the site") do
 end
 
 Given("I visit the create article page") do
-    pending # Write code here that turns the phrase above into concrete actions
+    visit new_article_path
 end
 
 When("I fill in {string} with {string}") do |string, string2|
