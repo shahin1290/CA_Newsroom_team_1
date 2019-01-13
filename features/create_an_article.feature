@@ -16,3 +16,7 @@ Feature: Create articles
     And I should see "Learning Rails 5"
     And I should see "This is the lede paragraph"
     And I should see "Shahin"
+
+  Scenario: Create an article [Sad Path]
+    When I click on "Create Article"
+    Then I should see "4 errors prohibited this article from being saved"
