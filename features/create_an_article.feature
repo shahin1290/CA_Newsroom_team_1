@@ -4,9 +4,24 @@ Feature: Create articles
   I would like to be able to have an article creation form
 
   Background:
-    Given I visit the create article page
+    Given the following user exists
+    | first_name  | last_name    | email          | password | role      |
+    | Hanna       | Nyman        | hanna@tuna.se  | password | journalist|
+    | William     | Schneiderman | will@gmail.com | password | member    |
+    
 
+  Scenario: navigates to create article page
+    When I am logged in as "hanna@tuna.se"
+    When I click on "New article"
+    Then I am on Create article page
+
+  Scenario: navigates to create article page
+    When I am logged in as "will@gmail.com"
+    Then I should not see "New article"
+    
   Scenario: Successfully create an article [Happy Path]
+    When I am logged in as "hanna@tuna.se"
+    When I click on "New article"
     When I fill in "Title" with "Learning Rails 5"
     And I fill in "Lede" with "This is the lede paragraph"
     And I fill in "Body" with "Excited about learning a new framework"
@@ -18,5 +33,7 @@ Feature: Create articles
     And I should see "Shahin"
 
   Scenario: Create an article [Sad Path]
+    When I am logged in as "hanna@tuna.se"
+    When I click on "New article"
     When I click on "Create Article"
     Then I should see "4 errors prohibited this article from being saved"
