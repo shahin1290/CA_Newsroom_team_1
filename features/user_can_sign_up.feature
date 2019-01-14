@@ -7,7 +7,7 @@ Feature: User can sign up
     Given the following user exists
     | first_name  | last_name | email         | password | password_confirmation |
     | Hanna       | Nyman     | hanna@tuna.se | password | password              |
-    And I am on 'Sign up' page
+    And I am on  Sign up page
 
   Scenario: When I fill in the sign up form, I can sign up [Happy Path]
     When I fill in 'First name' with 'John'

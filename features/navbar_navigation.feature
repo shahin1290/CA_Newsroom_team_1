@@ -10,4 +10,4 @@ Then I should see Navbar
 And I should see 'Home'
 And I should see 'Log in'
 And I click 'Sign up'
-Then I am on 'Sign up' page
+Then I am on Sign up page
