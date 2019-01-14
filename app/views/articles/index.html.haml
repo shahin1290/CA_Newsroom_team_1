@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+-if user_signed_in?
+  %p="Hello, #{current_user.first_name}!"
+  %p=link_to "Log out", destroy_user_session_path, method: :delete
+-else
+  %p=link_to "Sign up", new_user_registration_path
+  %p=link_to "Log in", new_user_session_path
+>>>>>>> c2d118bea9106d9ceb5287e3fa2f851a8b39eca1
 
 %h2 Articles
 - @articles.each do |article|

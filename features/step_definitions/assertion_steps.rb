@@ -4,4 +4,6 @@ end
 
 Then("I should see Navbar") do
   expect(page).to have_css '.navbar'
+Then("I should not see {string}") do |content|
+  expect(page).to have_no_content content
 end
