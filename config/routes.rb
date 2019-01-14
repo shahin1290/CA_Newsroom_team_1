@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :articles, only: [:index, :show]
 
   namespace :cms do
-    resources :articles, only: [:new, :create]
+    resources :articles, only: [:index, :new, :create, :edit, :update, :destroy]
   end
 
 end
