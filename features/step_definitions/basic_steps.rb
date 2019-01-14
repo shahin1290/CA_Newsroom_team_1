@@ -3,7 +3,7 @@ When("I visit the site") do
 end
 
 Given("I visit the create article page") do
-  visit new_article_path
+  visit new_cms_article_path
 end
 
 When('I fill in {string} with {string}') do |field, input|
@@ -28,10 +28,6 @@ Given("I am logged in as {string}") do |email|
   @user = User.find_by email: email
   login_as @user, scope: :user
   visit root_path
-end
-
-When("I fill in {string} with {string}") do |element, value|
-  fill_in element,with: value
 end
 
 When("I click {string}") do |element|
