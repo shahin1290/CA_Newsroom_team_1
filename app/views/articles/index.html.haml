@@ -1,5 +1,8 @@
+-if user_signed_in?
+  %p="Hello, #{current_user.first_name}!"
+-else
+  %p=link_to "Sign up", new_user_registration_path
 %h2 Articles
-
 - @articles.each do |article|
   %p= image_tag("article.jpg")  
   %h3= article.title
