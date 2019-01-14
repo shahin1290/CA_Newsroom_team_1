@@ -24,9 +24,6 @@ Given("the following user exists") do |table|
   end
 end
 
-When("I click {string}") do |element|
-  click_on element
-end
   
   
   
