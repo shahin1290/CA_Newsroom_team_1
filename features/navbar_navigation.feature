@@ -7,6 +7,7 @@ I would like to see a navbar with appropriate links.
 Scenario: Navigate through links in Navbar
 When I visit the site
 Then I should see Navbar
-And I should see "Home"
-And I should see "Sign up"
-And I should see "Log in"
+And I should see 'Home'
+And I should see 'Log in'
+And I click 'Sign up'
+Then I am on 'Sign up' page
