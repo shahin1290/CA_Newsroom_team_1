@@ -3,5 +3,6 @@
 This is a simple news site.
 
 # Features included:
-* Visitor can view articles
-* Visitor can register on the site
+* Visitors can view articles
+* Visitors can register on the site
+* Registered user can log in and log out
