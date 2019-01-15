@@ -16,6 +16,28 @@ class Cms::ArticlesController < ApplicationController
       render 'new'
     end
   end
+
+  def edit
+    @article = Article.find(params[:id])
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    if @article.update(article_params)
+      flash[:notice] = "Article was successfully updated."
+      redirect_to cms_articles_path
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+
+    redirect_to cms_articles_path
+  end
+
  
   private
 

@@ -7,7 +7,7 @@ Feature: Edit/delete articles
     Given the following user exists
     | first_name  | last_name    | email          | password | role      |
     | Hanna       | Nyman        | hanna@tuna.se  | password | journalist|
-    And the following article exists
+    And the following articles exists
     | title                | lede                         | author  | 
     | A breaking news item | hello this is about me       | Hanna   | 
     And I am logged in as "hanna@tuna.se"
