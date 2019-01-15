@@ -29,7 +29,6 @@ Feature: Create articles
     Then I should be on journalist index page
     And I should see "Learning Rails 5"
     And I should see "This is the lede paragraph"
-    And I should see "Shahin"
 
   Scenario: Create an article [Sad Path]
     When I am logged in as "hanna@tuna.se"
