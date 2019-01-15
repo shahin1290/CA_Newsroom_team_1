@@ -5,8 +5,8 @@ end
 User.create(email: "member@mail.com", password: "membermember", first_name: "Member", last_name: "Member", role: 0)
 User.create(email: "journalist@mail.com", password: "journalist", first_name: "Journo", last_name: "Journo", role: 1)
 
-Category.create(name: "Sports")
-Category.create(name: "Politics")
-Category.create(name: "Health")
-Category.create(name: "Finance")
-Category.create(name: "Entertainment")
+categories = ["Sports", "Politics", "Health", "Finance", "Entertainment"]
+
+categories.each do |category| 
+    Category.create(name: category)
+end
