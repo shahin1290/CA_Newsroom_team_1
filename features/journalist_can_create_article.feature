@@ -9,12 +9,12 @@ Feature: Create articles
     | Hanna       | Nyman        | hanna@tuna.se  | password | journalist|
     | William     | Schneiderman | will@gmail.com | password | member    |
     
-  Scenario: journalist navigates to create article page
+  Scenario: Journalist navigates to create article page
     When I am logged in as "hanna@tuna.se"
     And I click "New article"
     Then I am on Create article page
 
-  Scenario: non-journalist navigates to create article page
+  Scenario: Non-journalist navigates to create article page
     When I am logged in as "will@gmail.com"
     Then I should not see "New article"
     
