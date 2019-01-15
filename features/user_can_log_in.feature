@@ -14,11 +14,11 @@ Feature: User can log in and out
   Scenario: If user fills in the login form correctly she can log in
     When I fill in 'Email' with 'hanna@tuna.se'
     And I fill in 'Password' with 'password'
-    And I click 'Log in'
+    And I click 'Submit'
     Then I should see 'Hello, Hanna!'
 
   Scenario: If user fills in the login form incorrectly she will see an error message
-    When I click 'Log in'
+    When I click 'Submit'
     Then I should see 'Invalid Email or password.'
   
   Scenario: User can log out when logged in
