@@ -27,6 +27,6 @@ When("I click {string}") do |element|
   click_on element
 end
 
-Then("I am on Sign up page") do
-  expect(current_path).to eq new_user_registration_path
+When("I select {string} from {string}") do |option, selection|
+  select option, from: `product.#{selection}`
 end

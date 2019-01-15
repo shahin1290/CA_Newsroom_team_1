@@ -4,5 +4,6 @@ FactoryBot.define do
     lede { "MyText" }
     body { "MyText" }
     author { "MyString" }
+    association :category, factory: :category
   end
 end
