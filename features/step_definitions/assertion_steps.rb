@@ -9,3 +9,11 @@ end
 Then("I should not see {string}") do |content|
   expect(page).to have_no_content content
 end
+
+Then("I am on Create article page") do
+  expect(current_path).to eq new_cms_article_path
+end
+
+Then("I should be on journalist index page") do
+  expect(current_path).to eq cms_articles_path
+end
