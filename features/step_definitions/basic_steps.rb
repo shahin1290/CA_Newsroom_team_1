@@ -30,3 +30,8 @@ end
 Then("I am on Sign up page") do
   expect(current_path).to eq new_user_registration_path
 end
+
+When("I click to accept the alert message") do
+  alert = page.driver.browser.switch_to.alert
+  alert.accept
+end

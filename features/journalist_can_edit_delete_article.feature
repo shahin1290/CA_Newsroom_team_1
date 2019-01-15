@@ -20,12 +20,13 @@ Feature: Edit/delete articles
     And I fill in "Lede" with "This is the lede paragraph"
     And I fill in "Body" with "Excited about learning a new framework"
     And I fill in "Author" with "Hanna"
-    And I click "Create Article" 
+    And I click "Update Article" 
     Then I should be on journalist index page
     And I should see "Learning Rails 5"
     And I should see "This is the lede paragraph"
 
+  @javascript
   Scenario: Successfully delete an article
     When I click "Delete"
-    And I click OK
+    And I click to accept the alert message
     Then I should not see "A breaking news item"
