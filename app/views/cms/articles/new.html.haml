@@ -20,4 +20,7 @@
     = form.label :author
     = form.text_field :author
   %p
+    = form.collection_select(:category_id, Category.all, :id, :name) 
+
+  %p
     = form.submit
