@@ -1,6 +1,4 @@
--if user_signed_in?
-  %p="Hello, #{current_user.first_name}!"
-  %p=link_to "Log out", destroy_user_session_path, method: :delete
+%a{:href => "articles/new.html"} New Article
 
 %h1 List of articles
 %table
@@ -18,4 +16,3 @@
           method: :delete,                               |
           data: { confirm: 'Are you super-duper sure?' } |
 %br/
-%a{:href => "articles/new.html"} New Article

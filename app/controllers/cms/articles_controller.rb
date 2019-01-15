@@ -25,7 +25,7 @@ class Cms::ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     if @article.update(article_params)
       flash[:notice] = "Article was successfully updated."
-      redirect_to @article
+      redirect_to cms_articles_path
     else
       render 'edit'
     end
