@@ -26,7 +26,7 @@ Feature: Create articles
     And I fill in "Body" with "Excited about learning a new framework"
     And I fill in "Author" with "Shahin"
     And I click "Create Article" 
-    Then I should be index page
+    Then I should be on journalist index page
     And I should see "Learning Rails 5"
     And I should see "This is the lede paragraph"
     And I should see "Shahin"

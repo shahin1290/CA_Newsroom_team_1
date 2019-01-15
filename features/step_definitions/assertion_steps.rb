@@ -7,9 +7,9 @@ Then("I should not see {string}") do |content|
 end
 
 Then("I am on Create article page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(current_path).to eq new_cms_article_path
 end
 
-Then("I should be on index page") do
-  pending # Write code here that turns the phrase above into concrete actions
+Then("I should be on journalist index page") do
+  pending 
 end
