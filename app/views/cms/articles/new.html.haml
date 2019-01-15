@@ -18,6 +18,10 @@
     = form.text_area :body
   %p
     = form.label :author
-    = form.text_field :author
+    = current_user.first_name
+    = current_user.last_name
   %p
+
     = form.submit
+
+
