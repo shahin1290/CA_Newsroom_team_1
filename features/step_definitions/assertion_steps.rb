@@ -11,5 +11,5 @@ Then("I am on Create article page") do
 end
 
 Then("I should be on journalist index page") do
-  pending 
+  expect(current_path).to eq cms_articles_path
 end
