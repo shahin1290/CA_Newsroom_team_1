@@ -5,11 +5,15 @@ Feature: Edit/delete articles
 
   Background:
     Given the following user exists
-    | first_name  | last_name    | email          | password | role      |
-    | Hanna       | Nyman        | hanna@tuna.se  | password | journalist|
+    | first_name  | last_name    | email          | password | role      | id |
+    | Hanna       | Nyman        | hanna@tuna.se  | password | journalist| 1  |
+    And the following categories exists
+    |name    | id |
+    |Sports  | 1  |
+    |Politics| 2  |
     And the following articles exists
-    | title                | lede                         | author  | 
-    | A breaking news item | hello this is about me       | Hanna   | 
+    | title                | lede                         | author  | category_id | user_id |
+    | A breaking news item | hello this is about me       | William | 1           | 1       |
     And I am logged in as "hanna@tuna.se"
     And I click "My account"
     Then I should see "A breaking news item"
@@ -19,7 +23,7 @@ Feature: Edit/delete articles
     And I fill in "Title" with "Learning Rails 5"
     And I fill in "Lede" with "This is the lede paragraph"
     And I fill in "Body" with "Excited about learning a new framework"
-    And I fill in "Author" with "Hanna"
+    And I select "Politics" from "Category"
     And I click "Update Article" 
     Then I should be on journalist index page
     And I should see "Learning Rails 5"

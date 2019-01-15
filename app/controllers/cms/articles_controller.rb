@@ -7,7 +7,7 @@ class Cms::ArticlesController < ApplicationController
   def new
     @article = Article.new
   end
- 
+
   def create
     @article = Article.new(article_params)
     if @article.save
@@ -38,11 +38,10 @@ class Cms::ArticlesController < ApplicationController
     redirect_to cms_articles_path
   end
 
- 
   private
 
   def article_params
-    params.require(:article).permit(:title, :lede, :body, :author, :category_id)
+    params.require(:article).permit(:title, :lede, :body, :category_id, :user_id)
   end
 
 end
