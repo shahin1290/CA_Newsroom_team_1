@@ -17,14 +17,11 @@
     = form.label :body
     = form.text_area :body
   %p
-    = form.label :journalist
-    = form.collection_select :user_id, User.all, :id, :first_name 
+    = form.hidden_field :user_id, value: "1"
   %br
     = form.label :category
     .Category= form.collection_select :category_id, Category.all, :id, :name 
-
   %p
-
     = form.submit
 
 
