@@ -25,6 +25,7 @@ Feature: Create articles
     And I fill in "Lede" with "This is the lede paragraph"
     And I fill in "Body" with "Excited about learning a new framework"
     And I fill in "Author" with "Shahin"
+    And I select "Politics" from "Category"
     And I click "Create Article" 
     Then I should be on journalist index page
     And I should see "Learning Rails 5"
@@ -34,4 +35,4 @@ Feature: Create articles
     When I am logged in as "hanna@tuna.se"
     And I click "New article"
     And I click "Create Article"
-    Then I should see "4 errors prohibited this article from being saved"
+    Then I should see "5 errors prohibited this article from being saved"

@@ -17,3 +17,7 @@ end
 Then("I should be on journalist index page") do
   expect(current_path).to eq cms_articles_path
 end
+
+Then("I am on Sign up page") do
+  expect(current_path).to eq new_user_registration_path
+end
