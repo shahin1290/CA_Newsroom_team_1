@@ -5,12 +5,12 @@ Feature: User can see the details of a specific article
   I would like to be able to click on an article and have it displayed
 
    Background: 
-   And the following categories exists
+   Given the following categories exists
     |name    | id |
     |Sports  | 1  |
     |Politics| 2  |
     |Health  | 3  |
-    Given the following articles exists
+    And the following articles exists
       | title                | body                          | author  | created_at  | category_id |
       | A breaking news item | hello this is about me        | William | 2012-12-12  | 1           |
       | Learn Rails 5        | hello this is about that guy  | Camron  | 2013-11-11  | 3           |
