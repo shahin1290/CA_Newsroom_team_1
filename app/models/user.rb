@@ -9,3 +9,4 @@ class User < ApplicationRecord
   enum role: { member: 0, journalist: 1 }
   
 end
+
