@@ -5,5 +5,6 @@ FactoryBot.define do
     body { "MyText" }
     author { "MyString" }
     association :user, factory: :user
+    association :category, factory: :category
   end
 end

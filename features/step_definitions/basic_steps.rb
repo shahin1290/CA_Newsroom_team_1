@@ -31,3 +31,7 @@ When("I click to accept the alert message") do
   alert = page.driver.browser.switch_to.alert
   alert.accept
 end
+
+When("I select {string} from {string}") do |option, selection|
+  select option, from: `product.#{selection}`
+end
