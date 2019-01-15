@@ -28,5 +28,5 @@ When("I click {string}") do |element|
 end
 
 When("I select {string} from {string}") do |option, selection|
-  select option, from: selection
+  select option, from: `product.#{selection}`
 end

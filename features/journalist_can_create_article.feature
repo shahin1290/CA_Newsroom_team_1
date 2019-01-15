@@ -8,6 +8,11 @@ Feature: Create articles
     | first_name  | last_name    | email          | password | role      |
     | Hanna       | Nyman        | hanna@tuna.se  | password | journalist|
     | William     | Schneiderman | will@gmail.com | password | member    |
+    And the following categories exists
+    |name    |
+    |Sports  |
+    |Politics|
+    |Health  |
     
   Scenario: Journalist navigates to create article page
     When I am logged in as "hanna@tuna.se"
@@ -35,4 +40,4 @@ Feature: Create articles
     When I am logged in as "hanna@tuna.se"
     And I click "New article"
     And I click "Create Article"
-    Then I should see "5 errors prohibited this article from being saved"
+    Then I should see "4 errors prohibited this article from being saved"
