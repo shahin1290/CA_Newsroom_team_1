@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates_presence_of :first_name, :last_name, :email, :encrypted_password
+
   enum role: { member: 0, journalist: 1 }
+  
 end
 
