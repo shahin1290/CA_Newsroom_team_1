@@ -11,20 +11,21 @@ Feature: Create articles
     
   Scenario: Journalist navigates to create article page
     When I am logged in as "hanna@tuna.se"
-    And I click "New article"
+    And I click "My account"
+    And I click "New Article"
     Then I am on Create article page
 
   Scenario: Non-journalist navigates to create article page
     When I am logged in as "will@gmail.com"
-    Then I should not see "New article"
+    Then I should not see "New Article"
     
   Scenario: Successfully create an article [Happy Path]
     When I am logged in as "hanna@tuna.se"
-    And I click "New article"
+    And I click "My account"
+    And I click "New Article"
     And I fill in "Title" with "Learning Rails 5"
     And I fill in "Lede" with "This is the lede paragraph"
     And I fill in "Body" with "Excited about learning a new framework"
-    And I fill in "Author" with "Shahin"
     And I click "Create Article" 
     Then I should be on journalist index page
     And I should see "Learning Rails 5"
@@ -32,6 +33,7 @@ Feature: Create articles
 
   Scenario: Create an article [Sad Path]
     When I am logged in as "hanna@tuna.se"
-    And I click "New article"
+    And I click "My account"
+    And I click "New Article"
     And I click "Create Article"
     Then I should see "4 errors prohibited this article from being saved"
