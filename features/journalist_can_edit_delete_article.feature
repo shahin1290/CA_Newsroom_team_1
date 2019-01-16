@@ -12,8 +12,8 @@ Feature: Edit/delete articles
     |Sports  | 1  |
     |Politics| 2  |
     And the following articles exists
-    | title                | lede                         | category_id | user_id |
-    | A breaking news item | hello this is about me       | 1           | 1       |
+    | title                | lede                         | category_id | user_id | image   |
+    | A breaking news item | hello this is about me       | 1           | 1       | <image> |
     And I am logged in as "hanna@tuna.se"
     And I click "My account"
     Then I should see "A breaking news item"
