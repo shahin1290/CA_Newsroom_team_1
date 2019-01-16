@@ -43,25 +43,14 @@ ActiveRecord::Schema.define(version: 2019_01_16_070139) do
     t.string "author"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id"
     t.bigint "category_id"
     t.index ["category_id"], name: "index_articles_on_category_id"
-    t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "comments", force: :cascade do |t|
-    t.text "content"
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "article_id"
-    t.index ["article_id"], name: "index_comments_on_article_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -81,6 +70,4 @@ ActiveRecord::Schema.define(version: 2019_01_16_070139) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "articles", "categories"
-  add_foreign_key "articles", "users"
-  add_foreign_key "comments", "articles"
 end

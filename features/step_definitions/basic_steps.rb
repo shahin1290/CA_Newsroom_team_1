@@ -32,5 +32,5 @@ When("I select {string} from {string}") do |option, selection|
 end
 
 When("I attach a file") do
-  attach_file('article_image', "#{::Rails.root/spec/fixtures/basic_image.png}")
+  attach_file('article_image', "#{::Rails.root}/spec/fixtures/basic_image.png")
 end
