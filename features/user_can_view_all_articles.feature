@@ -4,7 +4,7 @@ As a visitor
 In order to choose an article to read
 I would like to be able to see the articles listed on a page
 
-  Scenario: View list of articles on the index page
+  Background:
     Given the following categories exists
     |name    | id |
     |Sports  | 1  |
@@ -17,6 +17,7 @@ I would like to be able to see the articles listed on a page
     | title                | lede                          | created_at  | category_id | user_id |
     | A breaking news item | hello this is about me        | 2012-12-12  | 1           | 1       |
 
+  Scenario: View list of articles on the index page
     When I visit the site
     Then I should see "A breaking news item"
     And I should see "Hanna"
