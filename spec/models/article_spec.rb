@@ -22,7 +22,7 @@ RSpec.describe Article, type: :model do
   end
 
   describe 'Image attachment' do
-    let!(:image){ File.open(fixures_path + '/basic_image.png')}
+    let(:image){ File.open(fixture_path + '/basic_image.png')}
 
     it 'can be attached to article' do
       subject.image.attach(io: image, 
