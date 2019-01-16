@@ -7,20 +7,19 @@ Feature: Edit/delete articles
     Given the following user exists
     | first_name  | last_name    | email          | password | role      | id |
     | Hanna       | Nyman        | hanna@tuna.se  | password | journalist| 1  |
+    
+    And the following articles exists
+    | title                | lede                         | author  | 
+    | A breaking news item | hello this is about me       | Hanna   | 
+
     And the following categories exists
     |name    | id |
     |Sports  | 1  |
     |Politics| 2  |
-    When I am logged in as "hanna@tuna.se"
+
+    And I am logged in as "hanna@tuna.se"
     And I click "My account"
-    And I click "New Article"
-    And I fill in "Title" with "Learning Rails 5"
-    And I fill in "Lede" with "This is the lede paragraph"
-    And I fill in "Body" with "Excited about learning a new framework"
-    And I attach a file
-    And I select "Politics" from "Category"
-    And I click "Create Article"
-    Then I should see "Learning Rails 5"
+    Then I should see "A breaking news item"
     
   Scenario: Successfully edit an article
     When I click "Edit"
