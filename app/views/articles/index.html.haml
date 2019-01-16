@@ -2,7 +2,7 @@
   -if current_user.role == 'journalist'
     %p=link_to "My account", cms_articles_path 
 
-%h2 Articles
+%h2= t 'Articles'
 - @articles.each do |article|
   %h3= link_to "#{article.title}", article
   %p= article.category.name
