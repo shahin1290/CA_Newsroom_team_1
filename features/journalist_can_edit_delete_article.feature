@@ -11,12 +11,16 @@ Feature: Edit/delete articles
     |name    | id |
     |Sports  | 1  |
     |Politics| 2  |
-    And the following articles exists
-    | title                | lede                         | category_id | user_id | image   |
-    | A breaking news item | hello this is about me       | 1           | 1       | <image> |
-    And I am logged in as "hanna@tuna.se"
+    When I am logged in as "hanna@tuna.se"
     And I click "My account"
-    Then I should see "A breaking news item"
+    And I click "New Article"
+    And I fill in "Title" with "Learning Rails 5"
+    And I fill in "Lede" with "This is the lede paragraph"
+    And I fill in "Body" with "Excited about learning a new framework"
+    And I attach a file
+    And I select "Politics" from "Category"
+    And I click "Create Article"
+    Then I should see "Learning Rails 5"
     
   Scenario: Successfully edit an article
     When I click "Edit"
