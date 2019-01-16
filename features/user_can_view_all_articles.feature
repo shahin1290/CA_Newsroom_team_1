@@ -14,19 +14,14 @@ I would like to be able to see the articles listed on a page
     | first_name  | last_name    | email          | password | role      | id |
     | Hanna       | Nyman        | hanna@tuna.se  | password | journalist| 1  |
     And the following articles exists
-    | title                | lede                          | author  | created_at  | category_id | user_id |
-    | A breaking news item | hello this is about me        | William | 2012-12-12  | 1           | 1       |
-    | Learn Rails 5        | hello this is about that guy  | Camron  | 2013-11-11  | 3           | 1       |
+    | title                | lede                          | created_at  | category_id | user_id |
+    | A breaking news item | hello this is about me        | 2012-12-12  | 1           | 1       |
 
     When I visit the site
     Then I should see "A breaking news item"
-    And I should see "Learn Rails 5"
-    And I should see "William"
-    And I should see "Camron"
+    And I should see "Hanna"
     And I should see "hello this is about me"
-    And I should see "hello this is about that guy"
     And I should see "Sports"
-    And I should see "Health"
 
 
     
