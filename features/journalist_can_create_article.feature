@@ -31,6 +31,7 @@ Feature: Create articles
     And I fill in "Body" with "Excited about learning a new framework"
     And I fill in "Author" with "Shahin"
     And I select "Politics" from "Category"
+    And I attach a file
     And I click "Create Article" 
     Then I should be on journalist index page
     And I should see "Learning Rails 5"
